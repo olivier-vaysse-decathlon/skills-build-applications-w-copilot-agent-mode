@@ -34,7 +34,7 @@ Record your plan here before editing code.
 - Data tier decision: enforce the model requirements/defaults and keep seed behavior intact; rerun the data contract suite.
 - Logic tier decision: implement activity/team validation and persistence, leaderboard aggregation/ranking, and user-aware workout suggestions with deliberate 4xx responses; rerun API tests and the backend build.
 - Presentation tier decision: implement API-backed rendering and consistent loading, empty, and error states; rerun frontend tests and build.
-Activity tracking approach: Validate the request and confirm userId and teamId refer to existing records. Save the activity with computed points and an occurrence timestamp; return a clear 4xx for invalid input or references.
+- Activity tracking approach: Validate the request and confirm userId and teamId refer to existing records. Save the activity with computed points and an occurrence timestamp; return a clear 4xx for invalid input or references.
 - Team management approach: Require a team name, preserve the submitted name and mascot, and validate member IDs before saving. Keep team membership consistent when creating or listing teams.
 - Leaderboard approach: Sum activity points per team, sort teams from highest to lowest total, and return each team’s name, total points, and 1-based rank.
 - Workout suggestions approach: Find the user by email and use their fitness goal and recent activities to choose matching workouts. Include a reason for the top suggestion; return a clear 4xx if the user is unknown.
