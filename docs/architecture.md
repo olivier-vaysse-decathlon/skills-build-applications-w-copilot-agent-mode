@@ -38,6 +38,12 @@ Record your plan here before editing code.
 - Leaderboard approach:
 - Workout suggestions approach:
 
+Smallest safe implementation order
+- Before implementation, record the tier and capability decisions in the architecture doc, as it instructs.
+- Data tier: enforce the model requirements/defaults and keep seed behavior intact; rerun the data contract suite.
+- Logic tier: implement activity/team validation and persistence, leaderboard aggregation/ranking, and user-aware workout suggestions with deliberate 4xx responses; rerun API tests and the backend build.
+- Presentation tier: implement API-backed rendering and consistent loading, empty, and error states; rerun frontend tests and build.
+
 ## Test plan
 
 Record the commands you run and what each failure means.
